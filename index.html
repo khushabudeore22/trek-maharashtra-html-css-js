@@ -3,9 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Maharashtra Treks</title>
+
+<link rel="stylesheet" href="./Navbar.css">
+<link rel="stylesheet" href="./css/style.css">
+<style>
+    
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+    width:100%;
+}
+
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:#094438;
+    padding:10px 40px;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Logo */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.logo-text{
+    color:#ffffff;
+    font-size:22px;
+    font-weight:600;
+}
+
+/* Navigation Links */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    list-style:none;
+
+    margin-left:auto;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#ffffff;
+    font-weight:500;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#C0B87A;
+}
+
+/* Hamburger Menu */
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+
+#img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+
+@media(max-width:900px){
+
+    .navbar{
+        padding:10px 20px;
+    }
+
+    .menu-toggle{
+        display:block;
+        margin-left:auto;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:100%;
+        left:0;
+
+        width:100%;
+        background:#005F02;
+
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+
+        padding:20px 0;
+
+        display:none;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+}
+</style>
 </head>
 <body>
     
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+<div class="logo">
+<img src="./images/trek-logo.jpeg">
+<h1 class="logo-text">Maharashtra Treks</h1>
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="treks.html">Treks</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="favorites.html">Favorites</a></li>
+<li><a href="feedback.html">Feedback</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="login.html">Login</a></li>
+</ul>
+
+</nav>
+
+<!-- ================= HERO SLIDER ================= -->
+
+<div class="ig">
+<img src="./images/home/img1.jpg" class="hero-img">
+
+<div class="hero">
+<h1 class="hero-title">Find Eco-Friendly Treks</h1>
+<p>Featured one stop to your mountain adventures</p>
+</div>
+</div>
+
+<!-- ================= SEARCH SECTION ================= -->
+
+<section class="search-container">
+<div id="trek-result">Where will you go today?</div>
+<button class="btn-action" onclick="generateTrek()">
+Generate Random Trek
+</button>
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats-grid">
+
+<div class="stat-card">
+<h2 id="count-forts">0</h2>
+<p>Historic Forts</p>
+</div>
+
+<div class="stat-card">
+<h2 id="count-users">0</h2>
+<p>Happy Trekkers</p>
+</div>
+
+</section>
+
+<!-- ================= PART 1 ================= -->
+
+<h1 class="explore">
+Explore with <span class="explore-part">Trekkers of Maharashtra</span>
+</h1>
+
+<h2 class="explore-subheading">
+Maharashtra’s biggest and safest adventure organisation.
+</h2>
+
+<div id="card-container1" class="card-container"></div>
+
+
+<!-- ================= PART 2 ================= -->
+
+<h1 class="explore">
+Upcoming Treks <span class="explore-part">From Pune</span>
+</h1>
+
+<h2 class="explore-subheading">
+We organise One Day Trek from Pune
+</h2>
+
+<div id="card-container2"
+style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;padding:20px;">
+</div>
+
+<button class="explore-btn" href="./track.html">EXPLORE TREKS</button>
+
+<!-- ================= PART 3 ================= -->
+
+<h1 class="explore">
+Upcoming Treks <span class="explore-part">From Mumbai</span>
+</h1>
+
+<h2 class="explore-subheading">
+We organise One Day Trek from Mumbai
+</h2>
+
+<div id="card-container3"
+style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;padding:20px;">
+</div>
+
+<button class="explore-btn" href="./track.html">EXPLORE TREKS</button>
+
+
+
+<!-- ================= DIY SECTION ================= -->
+
+<section class="diy-section">
+
+<h2 class="diy-title">
+Do It <span>Yourself Treks</span>
+</h2>
+
+<p class="diy-subtitle">
+Do-It-Yourself Treks for the Highest Sense of Adventure
+</p>
+
+<div class="diy-container">
+
+<div class="diy-card diy-big">
+<img src="./images/home/img3.jpg">
+<div class="diy-text">Murud janjira</div>
+</div>
+
+<div class="diy-grid">
+
+<div class="diy-card">
+<img src="./images/home/img1.jpg">
+<div class="diy-text">NEAR MUMBAI</div>
+</div>
+
+<div class="diy-card">
+<img src="./images/home/img8.jpg">
+<div class="diy-text">Shivneri Fort</div>
+</div>
+
+<div class="diy-card">
+<img src="./images/home/img2.jpg">
+<div class="diy-text">Kondana </div>
+</div>
+
+<div class="diy-card">
+<img src="./images/home/img5.jpeg">
+<div class="diy-text">SinghGad - Kondhana</div>
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+
+<!-- ================= PART 4 ================= -->
+
+<h1 class="explore">
+Offbeat Treks <span class="explore-part">in Sahyadri</span>
+</h1>
+
+<h2 class="explore-subheading">
+Explore hidden gems of Sahyadri mountain ranges.
+</h2>
+
+<div id="card-container4"
+style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;padding:20px;">
+</div>
+<button class="explore-btn" href="./track.html">EXPLORE TREKS</button>
+
+<!-- ================= VIDEO SECTION ================= -->
+<h1 class="explore">
+    Watch Thrilling <span class="explore-part">Trek Videos</span>
+</h1>
+
+<h2 class="explore-subheading">
+    Explore famous forts of Maharashtra
+</h2>
+
+<div class="video-container">
+
+    <!-- Sinhagad - Kondhana -->
+    <div class="video-box">
+
+   <a href="https://www.youtube.com/shorts/CUPjie6G-5w" target="_blank">
+
+        <div class="video-poster">
+            <img src="./images/home/img11.jpg" alt="Sinhagad Trek">
+            <div class="play-btn">▶</div>
+        </div>
+
+    </a>
+
+</div>
+
+    <!-- Murud Janjira -->
+    <div class="video-box">
+
+   <a href="https://www.youtube.com/shorts/-HqSHTiI_aU" target="_blank">
+
+        <div class="video-poster">
+            <img src="./images/home/img9.jpg" alt="Sinhagad Trek">
+            <div class="play-btn">▶</div>
+        </div>
+
+    </a>
+</div>
+</div>
+
+
+<script>
+    function toggleMenu(){
+    document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+
+<!-- ================= SCRIPT FILE ================= -->
+
+<script src="./js/home.js"></script>
+
 </body>
 </html>
