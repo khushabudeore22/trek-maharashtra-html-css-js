@@ -5,8 +5,59 @@
     --accent:#C0B87A;
     --white:#ffffff;
     color:#555;
+}/* ===== Dark Theme Text Fix ===== */
+
+.dark-theme{
+    background-color:#121212;
+    color:#1bb798;
 }
 
+/* Trek result text */
+.dark-theme #trek-result{
+    color:#1bb798;
+}
+
+/* Headings */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3{
+    color:#1bb798;
+}
+
+/* Cards */
+.dark-theme .trek-card{
+    background:#1e1e1e;
+}
+
+/* Explore section text */
+.dark-theme .explore{
+    color:#1bb798;
+}
+
+.dark-theme .explore-subheading{
+    color:#ddd;
+}
+.theme-btn{
+    background-color:#094438;
+    color:#ffffff;
+    padding:15px 25px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    width: fit-content;
+    display:block;
+    margin:2% auto;
+
+    text-align:center;
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+.theme-btn:hover{
+    opacity:0.8;
+}
 /* ================= SLIDER ================= */
 
 .ig{
@@ -69,44 +120,29 @@
     }
 }
 /* ================= GENERATOR SECTION ================= */
-
 .search-container{
-    background: var(--white);
-    width: 80%;
-    max-width: 700px;
-    margin: -50px auto 40px;
-    padding: 30px;
-    border-radius: 50px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
-    position:relative;
-    z-index:999; /* ⭐ High priority layer */
+    text-align:center;
+    padding:40px 20px;
 }
 
-#trek-result {
-    font-weight: bold;
-    font-size: 1.4rem;
-    color:#1bb798;
+#trek-result{
+    font-size:22px;
+    margin-bottom:15px;
+    color:#094438;
 }
 
-/* Button */
-.btn-action {
-    background-color: var(--primary-green);
-    color: var(--white);
-    border: none;
-    padding: 14px 32px;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.btn-action{
+    background:#094438;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:16px;
 }
 
-.btn-action:hover {
-    transform: scale(1.05);
-    background-color: #094438;
+.btn-action:hover{
+    transform:scale(1.05);
 }
 
 /* ================= STATS SECTION ================= */
@@ -238,20 +274,26 @@
 /* ------- -----------------------------------------------*/
 .explore-btn{
     background-color:#094438;
-    color: #ffffff;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    display: block;
-    margin: 2% auto;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 2%;
+    color:#ffffff;
+    padding:15px 25px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    width: fit-content;
+    display:block;
+    margin:2% auto;
+
+    text-align:center;
+    text-decoration:none;
+
+    transition:transform 0.3s ease, background-color 0.3s ease;
 }
-.explore-btn:hover { transform: scale(1.05); }
+
+.explore-btn:hover{
+    transform:scale(1.05);
+    background-color:#0f6b5a;
+}
 /* ================= DIY TREK SECTION   part 6 ================= */
 
 .diy-section{
