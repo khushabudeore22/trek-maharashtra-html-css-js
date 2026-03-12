@@ -5,8 +5,59 @@
     --accent:#C0B87A;
     --white:#ffffff;
     color:#555;
+}/* ===== Dark Theme Text Fix ===== */
+
+.dark-theme{
+    background-color:#121212;
+    color:#1bb798;
 }
 
+/* Trek result text */
+.dark-theme #trek-result{
+    color:#1bb798;
+}
+
+/* Headings */
+.dark-theme h1,
+.dark-theme h2,
+.dark-theme h3{
+    color:#1bb798;
+}
+
+/* Cards */
+.dark-theme .trek-card{
+    background:#1e1e1e;
+}
+
+/* Explore section text */
+.dark-theme .explore{
+    color:#1bb798;
+}
+
+.dark-theme .explore-subheading{
+    color:#ddd;
+}
+.theme-btn{
+    background-color:#094438;
+    color:#ffffff;
+    padding:15px 25px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    width: fit-content;
+    display:block;
+    margin:2% auto;
+
+    text-align:center;
+    text-decoration:none;
+
+    transition:0.3s;
+}
+
+.theme-btn:hover{
+    opacity:0.8;
+}
 /* ================= SLIDER ================= */
 
 .ig{
@@ -69,44 +120,29 @@
     }
 }
 /* ================= GENERATOR SECTION ================= */
-
 .search-container{
-    background: var(--white);
-    width: 80%;
-    max-width: 700px;
-    margin: -50px auto 40px;
-    padding: 30px;
-    border-radius: 50px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
-    position:relative;
-    z-index:999; /* ⭐ High priority layer */
+    text-align:center;
+    padding:40px 20px;
 }
 
-#trek-result {
-    font-weight: bold;
-    font-size: 1.4rem;
-    color:#1bb798;
+#trek-result{
+    font-size:22px;
+    margin-bottom:15px;
+    color:#094438;
 }
 
-/* Button */
-.btn-action {
-    background-color: var(--primary-green);
-    color: var(--white);
-    border: none;
-    padding: 14px 32px;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.btn-action{
+    background:#094438;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:16px;
 }
 
-.btn-action:hover {
-    transform: scale(1.05);
-    background-color: #094438;
+.btn-action:hover{
+    transform:scale(1.05);
 }
 
 /* ================= STATS SECTION ================= */
@@ -238,20 +274,26 @@
 /* ------- -----------------------------------------------*/
 .explore-btn{
     background-color:#094438;
-    color: #ffffff;
-    padding: 15px 20px;
-    border: none;
-    border-radius: 30px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    display: block;
-    margin: 2% auto;
-    text-align: center;
-    text-decoration: none;
-    margin-bottom: 2%;
+    color:#ffffff;
+    padding:15px 25px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    cursor:pointer;
+    width: fit-content;
+    display:block;
+    margin:2% auto;
+
+    text-align:center;
+    text-decoration:none;
+
+    transition:transform 0.3s ease, background-color 0.3s ease;
 }
-.explore-btn:hover { transform: scale(1.05); }
+
+.explore-btn:hover{
+    transform:scale(1.05);
+    background-color:#0f6b5a;
+}
 /* ================= DIY TREK SECTION   part 6 ================= */
 
 .diy-section{
@@ -419,3 +461,96 @@
         height:220px;
     }
 }
+
+/* ===== FOOTER ===== */
+
+.main-footer{
+    background: #31443b;
+    color:#fff;
+    padding:50px 20px 20px;
+    margin-top:50px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:30px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.footer-col{
+    flex:1 1 200px;
+}
+
+.footer-col h3{
+    margin-bottom:15px;
+    font-size:16px;
+    border-bottom:1px solid #f6f1f1;
+    padding-bottom:8px;
+}
+
+.footer-col p{
+    margin:8px 0;
+    font-size:14px;
+    color:#ccc;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.footer-col p:hover{
+    color:#fff;
+}
+
+
+.footer-col a{
+    text-decoration: none;   
+    color: #ccc;           
+    transition: 0.3s;
+}
+
+.footer-col a:hover{
+    color: #f0c76b ;            
+}
+
+
+
+.social-icons{
+    text-align:center;
+    margin-top:30px;
+}
+
+.social-icons a {
+    margin:0 10px;
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.social-icons span:hover{
+    color:#2E8B57;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:30px;
+    font-size:14px;
+    color:#aaa;
+    border-top:1px solid #333;
+    padding-top:15px;
+}
+@media (max-width: 768px){
+
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-col{
+        margin-bottom:20px;
+    }
+}
+
+
+
