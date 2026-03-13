@@ -1,21 +1,11 @@
-document.getElementById("signupForm").addEventListener("submit",function(e){
+function showLogin()
+{
+document.querySelector(".signup").style.display = "none";
+document.querySelector(".login").style.display = "flex";
+}
 
-e.preventDefault();
-
-let name=document.getElementById("name").value;
-let email=document.getElementById("email").value;
-let password=document.getElementById("password").value;
-
-let user={
-name:name,
-email:email,
-password:password
-};
-
-localStorage.setItem("user",JSON.stringify(user));
-
-alert("Signup Successful");
-
-window.location.href="login.html";
-
-});
+function showSignup()
+{
+document.querySelector(".login").style.display = "none";
+document.querySelector(".signup").style.display = "flex";
+}

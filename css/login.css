@@ -155,9 +155,9 @@ justify-content:space-between;
 }
 
 .login-box{
-width:320px;
-background:rgba(255,255,255,0.9);
-padding:30px;
+width:400px;
+background:rgba(255,255,255,0.15);
+padding:40px;
 border-radius:10px;
 }
 
@@ -176,6 +176,13 @@ position:relative;
 margin-bottom:15px;
 }
 
+.input-box input{
+width:100%;
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
 .input-box{
     position: relative;
 }
@@ -191,13 +198,6 @@ margin-bottom:15px;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-}
-
-.input-box input{
-width:100%;
-padding:10px;
-border:1px solid #ccc;
-border-radius:5px;
 }
 
 .input-box span{
