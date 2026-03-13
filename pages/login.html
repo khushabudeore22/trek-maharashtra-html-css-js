@@ -1,33 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Login</title>
-
-<link rel="stylesheet" href="../css/login.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trekup Login</title>
+<link rel="stylesheet" href="./../css/login.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
+ <header>
+     <div class="main-containe">
+        <div class="navbar-main-container">
+            <div class="logo-container">
+                <img src="./../images/trek-logo.jpeg" alt="interior-design-logo" height="50px" class="main-logo">
+                <b class="project-name">Maharashtra Trekking Portal</b>
+            </div>
+            
+          <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            
+           <div class="nav-links-container" id="navMenu">
+                <a href="./../index.html" class="nav-text-container"> Home</a>
+                <a href="./../pages/about.html" class="nav-text-container">About</a>
+                <a href="./../pages/trek.html" class="nav-text-container">Treks</a>
+                <a href="./../pages/gallery.html" class="nav-text-container">Gallery</a>
+                <a href="./../pages/contact.html" class="nav-text-container">Contact</a>
+                <a href="./../pages/feedback.html" class="nav-text-container">Feedback</a>
+                <a href="./../pages/favourite.html" class="nav-text-container">Favourites</a>
+            </div>
 
-<div class="box">
+            <div class="auth-links-containar">
+                <a href="./../pages/login.html" class="nav-text-container">Login</a>
+                <a href="./../pages/signup.html" class="nav-text-container">Sign Up</a>
+            </div>
+        </div>
+
+</header>
+<div class="container">
+
+<div class="login-box">
 
 <h2>Trek Maharashtra</h2>
-<h3>Login</h3>
+<p>Login to Your Account</p>
 
-<form id="loginForm">
+<form>
 
-<input type="email" id="email" placeholder="Enter Email" required>
+<div class="input-box">
+<input type="text" placeholder="Enter username">
+</div>
 
-<input type="password" id="password" placeholder="Enter Password" required>
+<div class="input-box">
+    <input type="password" id="password" placeholder="Enter password">
+
+    <img src="./../images/view.png"
+         id="toggle"
+         class="img-toggle"
+         height="20"
+         onclick="togglePassword()">
+</div>
+
+<div class="options">
+<a href="#">Forgot Password?</a>
+</div>
 
 <button type="submit">Login</button>
 
-<p>Don't have account? 
-<a href="signup.html">Signup</a>
-</p>
+<p class="signup">Don't have an account? <a href="./../pages/signup.html">Create an Account</a></p>
 
 </form>
+
+</div>
+
+<div class="text-area">
+
+<h1>THE GOAL OF LIFE IS <br> LIVING IN <br> AGREEMENT WITH <br> NATURE..</h1>
+
+<div class="social">
+<span>📘</span>
+<span>📷</span>
+<span>💼</span>
+<span>🐦</span>
+</div>
+
+</div>
 
 </div>
 

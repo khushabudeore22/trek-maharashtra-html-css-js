@@ -1,73 +1,260 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", sans-serif;
+}
 body{
-margin:0;
-padding:0;
-font-family:Arial, sans-serif;
-
-background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
-
-background-size:cover;
-background-position:center;
-
+font-family: Arial, sans-serif; 
+          
 height:100vh;
+background:url("./../images/background.jpg") no-repeat center center/cover;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
 }
 
-.box{
 
-background:white;
-padding:40px;
-width:320px;
-border-radius:10px;
+.navbar-main-container {
+    background-color: #31443b;
+    color: #f7f5eb ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    z-index: 1000;
+}
+
+.main-container {
+    height: 600px;
+    width: 1527px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-name {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family:"Poppins" ,sans-serif;
+}
+
+.main-logo {
+    border-radius: 60px;
+
+}
+
+.nav-links-container {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    color: #f7f5eb ;
+}
+
+.nav-text-container {
+    color:#f7f5eb ;
+     text-decoration: none; 
+     
+}
+.nav-text-container:hover{
+    color: #f0c76b ;            
+}
+
+.auth-links-containar {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.main-container {
+    height: 600px;
+    width: 1527px;
+}
+/* HAMBURGER BUTTON */
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+color:white;
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.navbar-main-container{
+flex-wrap:wrap;
+}
+
+.nav-links-container{
+display:none;
+flex-direction:column;
+width:100%;
 text-align:center;
-box-shadow:0px 0px 15px black;
+background:#31443b;
+}
+
+.auth-links-containar{
+display:none;
+flex-direction:column;
+width:100%;
+text-align:center;
+background:#31443b;
+}
+
+.nav-links-container.active,
+.auth-links-containar.active{
+display:flex;
+}
+
+}
+/* ================= TABLET (601px – 992px) ================= */
+@media screen and (max-width:992px){
+
+.navbar-main-container{
+    flex-wrap:wrap;
+    padding:10px;
+}
+
+.nav-links-container{
+    gap:15px;
+}
+
+.main-container{
+    width:100%;
+}
 
 }
 
-h2{
-color:#2e8b57;
+/* ================= LARGE SCREEN ================= */
+@media screen and (min-width:1200px){
+
+.main-container{
+    width:100%;
+}
+
+}
+
+
+.container{
+width:90%;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.login-box{
+width:320px;
+background:rgba(255,255,255,0.9);
+padding:30px;
+border-radius:10px;
+}
+
+.login-box h2{
+color:#ff5c5c;
 margin-bottom:5px;
 }
 
-h3{
+.login-box p{
+font-size:14px;
 margin-bottom:20px;
 }
 
-input{
+.input-box{
+position:relative;
+margin-bottom:15px;
+}
 
+.input-box{
+    position: relative;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+}
+
+.img-toggle{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.input-box input{
 width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:5px;
+padding:10px;
 border:1px solid #ccc;
-font-size:14px;
+border-radius:5px;
+}
 
+.input-box span{
+position:absolute;
+right:10px;
+top:10px;
+cursor:pointer;
+}
+
+.options{
+text-align:right;
+margin-bottom:15px;
+}
+
+.options a{
+font-size:12px;
+text-decoration:none;
+color:#333;
 }
 
 button{
-
 width:100%;
-padding:12px;
-background:#2e8b57;
-color:white;
+padding:10px;
+background:#ff5c5c;
 border:none;
+color:white;
 border-radius:5px;
-font-size:16px;
 cursor:pointer;
-transition:0.3s;
-
 }
 
-button:hover{
-
-background:#1e6b43;
-
+.signup{
+font-size:12px;
+margin-top:15px;
+text-align:center;
 }
 
-a{
-color:#2e8b57;
+.signup a{
 text-decoration:none;
-font-weight:bold;
+color:#ff5c5c;
+}
+
+.text-area{
+color:white;
+max-width:500px;
+}
+
+.text-area h1{
+font-size:40px;
+line-height:1.4;
+}
+
+.social{
+margin-top:20px;
+font-size:25px;
+}
+
+.social span{
+margin-right:15px;
+cursor:pointer;
 }

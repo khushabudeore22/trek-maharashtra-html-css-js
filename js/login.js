@@ -1,22 +1,23 @@
-document.getElementById("loginForm").addEventListener("submit",function(e){
+function toggleMenu(){
 
-e.preventDefault();
+let menu = document.getElementById("navMenu");
+let auth = document.querySelector(".auth-links-containar");
 
-let email=document.getElementById("email").value;
-let password=document.getElementById("password").value;
-
-let storedUser=JSON.parse(localStorage.getItem("user"));
-
-if(storedUser && email===storedUser.email && password===storedUser.password){
-
-alert("Login Successful");
-
-window.location.href="trek.html";
-
-}else{
-
-alert("Invalid Email or Password");
-
+menu.classList.toggle("active");
+auth.classList.toggle("active");
 }
 
-});
+
+
+function togglePassword() {
+    const password = document.getElementById("password");
+    const toggle = document.getElementById("toggle");
+
+    if (password.type === "password") {
+        password.type = "text";
+        toggle.src = "../images/hide.png";
+    } else {
+        password.type = "password";
+        toggle.src = "../images/view.png";
+    }
+}
