@@ -8,10 +8,10 @@ function toggleMenu(){
 /* ================= IMAGE SLIDER ================= */
 
 const images = [
-    "./../images/home/img1.jpg",
-    "./../images/home/img2.jpg",
-    "./../images/home/img3.jpg",
-    "./../images/home/img4.jpg"
+    "./images/home/img1.jpg",
+    "./images/home/img2.jpg",
+    "./images/home/img3.jpg",
+    "./images/home/img4.jpg"
 ];
 
 let index = 0;
@@ -53,7 +53,6 @@ function generateTrek() {
         `Recommended: ${trekList[randomIndex]} Fort! ⛰️`;
 }
 
-
 /* ================= COUNTER FUNCTION ================= */
 
 function animateCounter(id, targetValue) {
@@ -81,31 +80,31 @@ function animateCounter(id, targetValue) {
 /* ================= CARD DATA ================= */
 
 const cardData1 = [
-  { img: "./../images/home/part1-img1.jpg", title: "CORPORATE TRIPS & TREKS" },
-  { img: "./../images/home/part1-img4.jpg", title: "CUSTOMIZED TREKS/TRIPS" },
-  { img: "./../images/home/part1-img5.jpg", title: "FOR B-SCHOOLS & COLLEGES" },
-  { img: "./../images/home/part1-img6.jpg", title: "BIKE & BACKPACKING TRIPS" }
+  { img: "./images/home/part1-img1.jpg", title: "CORPORATE TRIPS & TREKS" },
+  { img: "./images/home/part1-img4.jpg", title: "CUSTOMIZED TREKS/TRIPS" },
+  { img: "./images/home/part1-img5.jpg", title: "FOR B-SCHOOLS & COLLEGES" },
+  { img: "./images/home/part1-img6.jpg", title: "BIKE & BACKPACKING TRIPS" }
 ];
 
 const cardData2 = [
-  { img: "./../images/home/img5.jpeg", title: "Sinhagad Fort" },
-  { img: "./../images/home/img6.jpg", title: "Pratapgad Fort" },
-  { img: "./../images/home/img7.jpg", title: "RatnagiriRatnadurg Fort " },
-  { img: "./../images/home/img8.jpg", title: "Shivneri Fort" }
+  { img: "./images/home/img5.jpeg", title: "Sinhagad Fort" },
+  { img: "./images/home/img6.jpg", title: "Pratapgad Fort" },
+  { img: "./images/home/img7.jpg", title: "RatnagiriRatnadurg Fort " },
+  { img: "./images/home/img8.jpg", title: "Shivneri Fort" }
 ];
 
 const cardData3 = [
-  { img: "./../images/home/img9.jpg", title: " Loghagad Fort " },
-  { img: "./../images/home/img10.jpeg", title: "Murud janjira" },
-  { img: "./../images/home/img11.jpg", title: "Purandar Fort" },
-  { img: "./../images/home/img12.jpeg", title: "Torna Fort" }
+  { img: "./images/home/img9.jpg", title: " Loghagad Fort " },
+  { img: "./images/home/img10.jpeg", title: "Murud janjira" },
+  { img: "./images/home/img11.jpg", title: "Purandar Fort" },
+  { img: "./images/home/img12.jpeg", title: "Torna Fort" }
 ];
 
 const cardData4 = [
-  { img: "./../images/home/img13.jpeg", title: "Harihar Fort" },
-  { img: "./../images/home/img14.jpg", title: "Kalsubai Peak" },
-  { img: "./../images/home/img15.jpg", title: "Ratangad Fort" },
-  { img: "./../images/home/img16.jpeg", title: "Harishchandragad trek " }
+  { img: "./images/home/img13.jpeg", title: "Harihar Fort" },
+  { img: "./images/home/img14.jpg", title: "Kalsubai Peak" },
+  { img: "./images/home/img15.jpg", title: "Ratangad Fort" },
+  { img: "./images/home/img16.jpeg", title: "Harishchandragad trek " }
 ];
 
 
@@ -157,4 +156,16 @@ function loadVideo(element, videoId){
         allowfullscreen>
         </iframe>
     `;
+}
+
+function toggleTheme(){
+    document.body.classList.toggle("dark-theme");
+
+    const btn = document.querySelector(".theme-btn");
+
+    if(document.body.classList.contains("dark-theme")){
+        btn.innerText = "☀️ Light Mode";
+    }else{
+        btn.innerText = "🌙 Dark Mode";
+    }
 }
