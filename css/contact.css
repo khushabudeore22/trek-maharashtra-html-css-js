@@ -71,7 +71,7 @@ body {
 
 .main-container {
     height: 600px;
-    width: 1527px;
+    width: 100%;
 }
 
 /* HAMBURGER BUTTON */
@@ -87,7 +87,7 @@ body {
     height: 350px;
     background:
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url('../images/banner-Trek.jpeg') center/cover no-repeat;
+        url('../images/trek-contact\ banner.jpg') center/cover no-repeat;
 }
 
 .header {
@@ -99,6 +99,9 @@ body {
     color: #2e7d32;
     font-size: 32px;
 }
+.text-head{
+    color: #f0c76b;
+}
 
 .main-container {
     display: flex;
@@ -107,7 +110,8 @@ body {
 }
 
 .contact-box {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     gap: 25px;
 }
@@ -156,18 +160,19 @@ textarea {
 }
 
 .submit-btn {
-    width: 100%;
-    padding: 12px;
-    background: #2e7d32;
-    color: white;
+   background-color:  #094438;;
+    color: var(--white);
     border: none;
-    border-radius: 8px;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
-    background: #1b5e20;
+   transform: scale(1.05);
+    background-color: #094438;
 }
 
 .info-section {
@@ -200,6 +205,10 @@ textarea {
 .card h3 {
     color: #2e7d32;
     margin-bottom: 5px;
+}
+
+.follow-card {
+    padding: 10px;
 }
 
 .social-icons img {
@@ -350,7 +359,7 @@ footer {
     }
 }
 
-@media (max-width:1024px) {
+@media (max-width:768px) {
 
     .contact-box {
         width: 100%;
@@ -415,6 +424,10 @@ footer {
         padding: 20px;
     }
 
+    .inquiry-section {
+        display: none;
+    }
+
     .card {
         padding: 15px;
     }
@@ -428,3 +441,122 @@ footer {
     }
 
 }
+
+@media (max-width: 480px) {
+    .form-content {
+        padding: 15px;
+    }
+
+    .form-image {
+        display: none;
+    }
+
+    input, textarea {
+        padding: 8px;
+        margin: 8px 0;
+    }
+
+    .submit-btn {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .trek-card {
+        padding: 10px;
+    }
+}
+
+/* ===== FOOTER ===== */
+
+.main-footer {
+    background: #31443b;
+    color: #fff;
+    padding: 50px 20px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+}
+
+.footer-col h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-bottom: 1px solid #f6f1f1;
+    padding-bottom: 8px;
+}
+
+.footer-col p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-col p:hover {
+    color: #fff;
+}
+
+
+.footer-col a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: #f0c76b;
+}
+
+
+
+.social-icons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons span:hover {
+    color: #2E8B57;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #f7efef;
+    padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-col {
+        margin-bottom: 20px;
+    }
+}
+
